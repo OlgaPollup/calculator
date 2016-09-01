@@ -18,13 +18,30 @@ public class JavaApplication6 {
      */
     public static void main(String[] args) {
         Integer number1, number2, sum;
+        String znak;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите число");
         number1=scanner.nextInt();
         System.out.println("Введите второе число");
         number2=scanner.nextInt();
-        sum=number1+number2;
-        System.out.println("Сумма введенных чисел равна: " +sum );
+        
+        System.out.println("Введите действие (+ или -)");
+        
+        znak = scanner.next();
+        sum = 0;
+        switch (znak) {
+            case "+":
+                sum=number1+number2;
+                break;
+             case "-":
+                sum=number1-number2;
+                break;
+            default:
+                System.out.println("Неправильно введены числа");
+                sum=null;
+        }
+        if(sum !=null)
+        System.out.println("Результат" +sum );
     }
     
 }
