@@ -36,6 +36,15 @@ public class JavaApplication6 {
              case "-":
                 sum=number1-number2;
                 break;
+                case "*":
+                sum=number1*number2;
+                break;  
+            case "/":
+                if (number2 !=0){
+                    sum=number1/number2;
+                }
+                else {
+                System.out.println("Деление на ноль невозможно");}
             default:
                 System.out.println("Неправильно введены числа");
                 sum=null;
